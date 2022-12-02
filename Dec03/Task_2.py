@@ -7,22 +7,18 @@ f = open(os.path.join(__location__,"Input.txt"))
 # if test needed
 #f = open(os.path.join(__location__,"Input_test.txt"))
 
-input_list = f.read().split("\n\n")
+input_list = f.read().split("\n")
 
-elves=[]
+#input_list = f.read().split()
+#input_list = list(map(int, f.read().split('\n')))
+
+#input_list = list(map(int, f.read().split(',')))
+
+print(input_list)
+
+
 for x in input_list:
-    elves.append(x.split("\n"))
+    
+    sum=0
 
-
-max_calories=[]
-for elf in elves:
-    sum_calories=0
-    for calories in elf:
-        sum_calories+=int(calories)
-    max_calories.append(sum_calories)
-
-
-
-
-print(sum(sorted(max_calories,reverse=True)[:3]))
 
