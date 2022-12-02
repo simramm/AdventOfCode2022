@@ -10,6 +10,7 @@ input_list = f.read().split("\n")
 
 #input_list = f.read().split()
 #input_list = list(map(int, f.read().split('\n')))
+
 #input_list = list(map(int, f.read().split(',')))
 
 print(input_list)
