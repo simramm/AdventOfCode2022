@@ -9,11 +9,6 @@ f = open(os.path.join(__location__,"Input.txt"))
 
 input_list = f.read().split("\n")
 
-#input_list = f.read().split()
-#input_list = list(map(int, f.read().split('\n')))
-
-#input_list = list(map(int, f.read().split(',')))
-
 numbers=[]
 for y in range(0,len(input_list)-2,3):
     character=''
