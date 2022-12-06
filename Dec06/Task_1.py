@@ -11,12 +11,10 @@ marker=[]
 num_characters=0
 
 for x in input:
-    #print(input[3607:])
     num_characters+=1
     if len(marker)>3:
         marker.pop(0)
     if x not in marker and len(marker)==len(set(marker)) and num_characters>4:
-        print(marker,x)
         print(num_characters)
         break
     marker.append(x)

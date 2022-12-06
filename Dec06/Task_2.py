@@ -15,7 +15,6 @@ for x in input:
     if len(marker)>13:
         marker.pop(0)
     if x not in marker and len(marker)==len(set(marker)) and num_characters>14:
-        print(marker,x)
         print(num_characters)
         break
     marker.append(x)
