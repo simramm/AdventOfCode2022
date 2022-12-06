@@ -3,21 +3,24 @@ import os
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 f = open(os.path.join(__location__,"Input.txt"))
 
-# if test needed
-#f = open(os.path.join(__location__,"Input_test.txt"))
+input = f.read()
+#input ='nppdvjthqldpwncqszvftbrmjlhg'
 
-input_list = f.read().split("\n")
+marker=[]
 
-#input_list = f.read().split()
-#input_list = list(map(int, f.read().split('\n')))
+num_characters=0
 
-#input_list = list(map(int, f.read().split(',')))
+for x in input:
+    num_characters+=1
+    if len(marker)>13:
+        marker.pop(0)
+    if x not in marker and len(marker)==len(set(marker)) and num_characters>14:
+        print(marker,x)
+        print(num_characters)
+        break
+    marker.append(x)
+ 
 
-print(input_list)
 
-
-for x in input_list:
-    
-    sum=0
 
 
