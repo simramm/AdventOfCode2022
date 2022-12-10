@@ -5,7 +5,6 @@ f = open(os.path.join(__location__,"Input.txt"))
 
 data = f.read().split("\n")
 
-
 signal_strengths=[]
 cycle=0
 pos=-1
@@ -15,13 +14,11 @@ cycling=True
 
 pixels=dict([])
 
-while cycling:
-    
+while cycling:    
 
     cmd=data[line].split(' ')[0]
 
     if cmd=='noop':
-
 
         cycle+=1
         pos+=1
@@ -34,9 +31,7 @@ while cycling:
             pixel='#'
         else:
             pixel='.'
-
         pixels[cycle]=[pixel]
-
         line+=1
 
 
@@ -47,8 +42,7 @@ while cycling:
         cycle+=1
         pos+=1
         if pos>40:
-            pos-=40
-        
+            pos-=40        
 
         if pos in (x-1,x,x+1):
             pixel='#'
@@ -77,14 +71,9 @@ while cycling:
     if line==len(data)-1:
         cycling=False
 
-
-
 row=''
 for x,y in pixels.items():
     row+=str(y[0])
     if len(row)==40:
         print(row)
         row=''
-
-
-
